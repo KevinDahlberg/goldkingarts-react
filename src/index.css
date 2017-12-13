@@ -1,5 +1,29 @@
+
+/* font for header */
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.wrapper {
+  display: grid;
+}
+
+.placeholder {
+
+}
+
+.navbar {
+  font-family: 'Reenie Beanie', cursive;
+}
+
+.content {
+
+}
+
+footer {
+
 }
