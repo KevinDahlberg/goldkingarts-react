@@ -32,7 +32,7 @@ export default class App extends Component {
         const init ={
             method: 'GET'
         }
-        fetch('http://wordpress.onepointoh.solutions/wp-json/wp-rest-routes/v2/settings/all', init)
+        fetch('http://wordpress.goldkingarts.com/wp-json/wp-rest-routes/v2/settings/all', init)
             .then((response) => {
                 return response.json()
             })
@@ -51,7 +51,7 @@ export default class App extends Component {
         const init = {
             method: 'GET'
         }
-        fetch('http://wordpress.onepointoh.solutions/wp-json/wp/v2/pages', init)
+        fetch('http://wordpress.goldkingarts.com/wp-json/wp/v2/pages', init)
         .then((response) => {
             return response.json()
         })

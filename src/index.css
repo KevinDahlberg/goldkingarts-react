@@ -10,6 +10,12 @@ body {
 
 .wrapper {
   display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 100px 350px 50px;
+  grid-template-areas:
+    ". h ."
+    ". c ."
+    ". f ."
 }
 
 .placeholder {
@@ -18,12 +24,38 @@ body {
 
 .navbar {
   font-family: 'Reenie Beanie', cursive;
+  grid-area: h;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: solid 2px lightgrey;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.navbar-title {
+  text-decoration: none;
+  font-size: 72px;
+  color: black;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.navbar-pagelink {
+  text-decoration: none;
+  color: black;
+  font-size: 36px;
+  margin-bottom: 8px;
 }
 
 .content {
-
+  grid-area: c;
 }
 
 footer {
-
+  grid-area: f;
 }
