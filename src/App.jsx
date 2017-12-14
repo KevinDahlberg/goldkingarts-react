@@ -19,6 +19,7 @@ export default class App extends Component {
                 description: '',
                 header_image: '',
             },
+            media: []
         }
     }
 
@@ -61,11 +62,35 @@ export default class App extends Component {
         })
     }
 
+    /**
+     * @function fetchImages
+     * @return array with images
+     * @since 1.0
+     * 
+     * this function pulls in data from the Wordpress REST API.  Future iterations may use sanitized data created with a different
+     * route.  Also, this gets the information for all of the images.  There's a possible change that you could make for the backend
+     * to provide only the images needed for the front page.
+     */
+    fetchImages() {
+        const init = {
+            method: 'GET'
+        }
+        fetch('http://wordpress.goldkingarts.com/wp-json/wp/v2/media', init)
+        .then((response) => {
+            return response.json()
+        })
+        .then((media) => {
+            this.setState({media: media})
+            console.log(this.state)
+        })
+    }
+
 
     //gets website parts asap
     componentWillMount() {
         this.fetchSettings()
         this.fetchPages()
+        this.fetchImages()
     }
 
     render() {
